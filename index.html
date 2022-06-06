@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Play&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .personalskill li {
+            list-style: none;
+        }
+
+        .education li {
+            list-style: inside;
+        }
+
+
+        p {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: antiquewhite;
+        }
+
+        h1 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+        }
+
+        h4 {
+            font-family: 'Lobster', cursive;
+        }
+
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background-color: black; */
+            height: 100vh;
+        }
+
+        .resumes {
+            height: 1400px;
+            width: 925px;
+            border: 5px solid black;
+            position: relative;
+            box-sizing: border-box;
+            overflow: hidden;
+            /* background-color: darkgray; */
+        }
+
+        .box {
+            height: 250px;
+            width: 100%;
+            background-color: rgba(36, 32, 32, 0.322);
+            position: absolute;
+            top: 0%;
+            left: 0;
+        }
+
+
+        .circle {
+            height: 200px;
+            width: 200px;
+            /* border-radius: 50%; */
+            background-color: cadetblue;
+            transform: rotate(45deg);
+            position: absolute;
+            top: 70px;
+            left: 100px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+
+        .circle h1 {
+            transform: rotate(-45deg);
+        }
+
+        .circle::before {
+            content: "";
+            height: 220px;
+            width: 220px;
+            border-radius: 50%;
+            border: 2px solid #333;
+
+            /* background-color: rgb(114, 214, 101); */
+            position: absolute;
+            top: -10px;
+            left: -10px;
+        }
+
+        .box::after {
+            content: "";
+            height: 100px;
+            width: 300px;
+            /* border-radius: 50%; */
+            background-color: black;
+            clip-path: polygon(1% 1%, 100% 1%, 79% 100%, 0% 100%);
+            position: absolute;
+            top: 50px;
+            left: 150px;
+            /* z-index: -10; */
+        }
+
+        .name {
+            position: absolute;
+            top: 25px;
+            right: 35px;
+            font-size: 60px;
+            color: white;
+        }
+
+        .names {
+            position: absolute;
+            top: 110px;
+            right: 320px;
+            border-top: 1px solid aqua;
+            border-bottom: 1px solid aqua;
+            color: white;
+
+        }
+
+        .laungage {
+            position: absolute;
+            top: 1000px;
+            left: 30PX;
+            color: white;
+        }
+
+        .personalskill {
+            position: absolute;
+            top: 400px;
+            left: 400px;
+
+        }
+
+        .personalskill h1 {
+            color: darkgray;
+        }
+
+        .reference {
+            position: absolute;
+
+            top: 300px;
+            left: 400px
+        }
+
+        .contact {
+            position: absolute;
+            top: 350px;
+            left: 30px;
+        }
+
+
+        .contact li {
+            list-style: none;
+            margin: 20px 0;
+            font-size: 18px;
+        }
+
+        .contact li i {
+            display: inline-block;
+            color: darkgrey;
+            font-size: 18px;
+        }
+
+        .education {
+            position: absolute;
+            top: 1050px;
+            left: 400px;
+            /* padding-right: 300px; */
+            color: white;
+        }
+
+        .education h1 {
+            color: darkgrey;
+        }
+
+        .education li {
+            margin-top: 30px;
+        }
+
+        .education li p {
+            margin: 10px;
+        }
+
+        .hobbies {
+            position: absolute;
+            top: 600px;
+            left: 30px;
+            font-size: 100px;
+            margin: 20px;
+        }
+.hobbies span{
+    color: #333;
+}
+        .hobbies span:nth-of-type(3) {
+           position: absolute;
+           top: 250px;
+           left: 0px;
+        }
+        .hobbies span:nth-of-type(4) {
+           position: absolute;
+           top: 240px;
+           left: 130px;
+        }
+    
+        .hobbies span:nth-of-type(1) {
+           position: absolute;
+           top: 100px;
+           left: 0px;
+        }
+        .hobbies span:nth-of-type(2) {
+           position: absolute;
+           top: 80px;
+           left: 140px;
+        }
+        .personalskill {
+            width: 500px;
+            margin: 60px auto;
+            color: white;
+        }
+
+        .bar {
+            background-color: #353b48;
+            display: block;
+            height: 2px;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            border-radius: 3px;
+            box-shadow: 0 0 10px #2187e7b3;
+        }
+
+        .bar span {
+            height: 2px;
+            float: left;
+            background-color: #2187e7b3;
+        }
+
+        .html {
+            width: 58%;
+        }
+
+        .css {
+            width: 77%;
+        }
+
+        .JavaScript {
+            width: 65%;
+        }
+
+        .mongo {
+            width: 60%;
+        }
+
+        .node {
+            width: 50%;
+        }
+
+        .express {
+            width: 70%;
+        }
+
+        .Angular {
+            width: 80%;
+        }
+
+        .sql {
+            width: 74%;
+        }
+
+        .laungage .bar {
+            background-color: #353b48;
+            display: block;
+            height: 5px;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            border-radius: 3px;
+            box-shadow: 0 0 10px #2187e7b3;
+        }
+
+        .laungage.bar span {
+            height: 2px;
+            float: left;
+            background-color: #2187e7b3;
+        }
+
+        .laungage li {
+            list-style: none;
+        }
+
+        .tamil {
+            width: 78%;
+        }
+
+        .english {
+            width: 63%;
+        }
+
+        .back {
+            height: 100%;
+            width: 550px;
+            background: #333;
+            position: absolute;
+            top: 0%;
+            right: 0%;
+            z-index: -1;
+        }
+
+        .left {
+            height: 100%;
+            width: 370px;
+            background: rgb(36, 114, 204);
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            z-index: -1;
+        }
+
+        h1 {
+            color: darkgrey;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="resumes">
+        <div class="tittle">
+            <h1 class="name">PRADEEPAN V</h1>
+            <h4 class="names">Web Developer</h4>
+            <div class="box"></div>
+            <div class="circle">
+                <h1 style="font-size: 100px;">VP</h1>
+            </div>
+        </div>
+        <div class="laungage">
+            <h1>LANGUAGES</h1>
+            <ul>
+                <li>
+                    <h3>Tamil</h3><span class="bar"><span class="tamil"></span></span>
+                </li>
+                <li>
+                    <h3>English</h3><span class="bar"><span class="english"></span></span>
+                </li>
+            </ul>
+        </div>
+        <div class="personalskill">
+            <h1>PERSONAL SKILLS</h1>
+            <ul>
+                <li>
+                    <h3>HTML</h3><span class="bar"><span class="html"></span></span>
+                </li>
+                <li>
+                    <h3>CSS</h3><span class="bar"><span class="css"></span></span>
+                </li>
+                <li>
+                    <h3>JavaScript</h3><span class="bar"><span class="JavaScript"></span></span>
+                </li>
+                <li>
+                    <h3>node.js</h3><span class="bar"><span class="node"></span></span>
+                </li>
+                <li>
+                    <h3>express js</h3><span class="bar"><span class="express"></span></span>
+                </li>
+                <li>
+                    <h3>Mongo DB</h3><span class="bar"><span class="mongo"></span></span>
+                </li>
+                <li>
+                    <h3>Angular</h3><span class="bar"><span class="Angular"></span></span>
+                </li>
+                <li>
+                    <h3>ORCAL MY SQL</h3><span class="bar"><span class="sql"></span></span>
+                </li>
+            </ul>
+        </div>
+        <div class="reference">
+            <h1>about me</h1>
+            <P>Seeking a challenging position in a reputed organization where I can learn new skills, expand my
+                knowledge, and leverage my learnings.</P>
+        </div>
+        <div class="education">
+            <h1>EDUCATION</h1>
+            <ul>
+                <li>
+                    B.E. Mchanical 2020
+                    <p>Anna University,</p>
+                    <p>CK College of engineering & tefchnology,</p>
+                    <p>cuddalore.</p>
+                </li>
+                <li>
+                    Higher secondary, 2015
+                    <p>AKT Higher secondary school,</p>
+                    <p>kallakurchi</p>
+                </li>
+            </ul>
+        </div>
+        <div class="hobbies">
+            <h1>INTREST</h1>
+            <span> <i class="material-icons" style="font-size:100px">games</i>
+
+            </span>
+            <span> <i class="fa fa-music"></i>
+            </span>
+            <span> <i class="material-icons" style="font-size:100px">ondemand_video</i>
+            </span>
+
+            <span> <i class="fa fa-motorcycle"></i>
+            </span>
+
+        </div>
+        <div class="contact">
+            <h1>CONTACT</h1>
+            <ul>
+                <li><span><i class="material-icons">phone_in_talk</i></span>
+                    <span>9361847704</span>
+                </li>
+                <li><span><i class="material-icons">mail</i></span>
+                    <span>pradeepanv03@gmail.com</span>
+                </li>
+                <li><span><i class="fa fa-github"></i></span>
+                    </i>
+                    <span>github</span>
+                </li>
+                <li><span><i class="material-icons">location_on</i></span>
+                    <span>Cuddalore</span>
+                </li>
+            </ul>
+        </div>
+        <div class="back"></div>
+        <div class="left"></div>
+    </div>
+</body>
+
+</html>
